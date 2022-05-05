@@ -18,12 +18,9 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
     @Query("UPDATE Medico medico " +
             "SET medico.excluido= : dataExcluido " +
             "WHERE medico.id = : medico")
-
     public <Medico> void updateStatus
         (@Param("dataExcuido")LocalDateTime dataExcruido,
          @Param("medico") Long idEspecialidade);
-
-    Page<Medico> findAll(Pageable pageable);
 
 
 

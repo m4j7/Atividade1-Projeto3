@@ -21,10 +21,9 @@ public interface ConvenioRepository extends JpaRepository<Convenio, Long> {
     @Query("UPDATE Convenio convenio " +
             "SET convenio.excluido= : dataExcluido " +
             "WHERE convenio.id = :especialidade")
-
     public void updateStatus(
             @Param("dataExcluido") LocalDateTime dataExcluido,
             @Param ("convenio") long idConvenio);
 
-    Page<Convenio> findAll(Pageable pageable);
+
 }
