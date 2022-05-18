@@ -24,18 +24,22 @@ public class Agenda extends AbstractEntity{
     @ManyToOne(fetch = FetchType.EAGER)
     private Medico medico;
     @Getter @Setter
+    @JoinColumn(name= "id secretaria")
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Secretaria secretaria;
+    @Getter @Setter
     @Enumerated(EnumType.STRING)
     @Column(name = "statusAgendamento", nullable = false)
     private StAgendamento statusAgendamento;
     @Getter @Setter
     @Column(name = "datade", nullable = false)
-    private LocalDate datade;
+    private LocalDateTime datade;
     @Getter @Setter
     @Column(name = "StEncaixe", columnDefinition = "BOOLEAN DEFAULT TIME", nullable = false)
     private Boolean StEncaixe;
     @Getter @Setter
     @Column(name = "Dataate", nullable = false)
-    private LocalDate dataate;
+    private LocalDateTime dataate;
 
 
 }
