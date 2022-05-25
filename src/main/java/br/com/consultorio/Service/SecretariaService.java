@@ -25,7 +25,7 @@ public class SecretariaService {
     }
 
     @Transactional //(manipulação de dados)
-    public void update(Long id, Secretaria secretaria) {
+    public void update (Secretaria secretaria, Long id) {
         if(id == secretaria.getId()) {
             this.secretariaRepository.save(secretaria);
         } else {
@@ -34,12 +34,12 @@ public class SecretariaService {
     }
 
     @Transactional
-    public void insert(Long id, Secretaria secretaria) {
+    public void insert( Secretaria secretaria) {
         this.secretariaRepository.save(secretaria);
     }
 
     @Transactional
-    public void updateStatus(Long id, Secretaria secretaria){
+    public void updateStatus(Secretaria secretaria, Long id){
         if (id == secretaria.getId()) {
             this.secretariaRepository.updateStatus(LocalDateTime.now(), secretaria.getId());
         }

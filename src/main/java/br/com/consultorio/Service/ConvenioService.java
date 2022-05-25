@@ -35,7 +35,7 @@ public class ConvenioService {
     }
 
     @Transactional
-    public void insert(Long id, Convenio convenio){
+    public void insert( Convenio convenio){
         this.convenioRepository.save(convenio);
     }
 

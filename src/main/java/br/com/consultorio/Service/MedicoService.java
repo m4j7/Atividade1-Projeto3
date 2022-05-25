@@ -30,7 +30,7 @@ public class MedicoService {
     }
 
     @Transactional // avisa pro banco que os dados vao ser alterados(manipulação de dados)
-    public void update(Long id, Medico medico) {
+    public void update(long id,Medico medico) {
         if(id == medico.getId()) {
             this.medicoRepository.save(medico);
         } else {
@@ -40,7 +40,7 @@ public class MedicoService {
     }
 
     @Transactional
-    public void insert(Long id, Medico medico) {
+    public void insert( Medico medico) {
         this.medicoRepository.save(medico);
     }
 

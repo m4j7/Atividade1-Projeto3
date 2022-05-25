@@ -49,7 +49,7 @@ public class EspecialidadeController {
 
     }
 
-    @PutMapping("/status/{idEspecialidade}")
+    @PutMapping()
     public ResponseEntity<?> updateStatus(@RequestBody Especialidade especialidade, @PathVariable Long idEspecialidade) {
         try {
             this.especialidadeService.updateStatus(idEspecialidade, especialidade);
@@ -59,5 +59,6 @@ public class EspecialidadeController {
         }
 
     }
+
 
 }

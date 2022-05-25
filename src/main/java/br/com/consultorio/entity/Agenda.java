@@ -40,7 +40,9 @@ public class Agenda extends AbstractEntity{
     @Getter @Setter
     @Column(name = "Dataate", nullable = false)
     private LocalDateTime dataate;
-
+    @Getter @Setter
+    @Column(name = "observacao")
+    private String observacao;
 
 }
 
